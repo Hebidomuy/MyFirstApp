@@ -1,15 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_main.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:mapType="normal" />
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
+
+    <FrameLayout
+        android:id="@+id/fragmentIntroContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
 
 </RelativeLayout>
