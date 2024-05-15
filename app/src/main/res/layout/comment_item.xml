@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Оцінка:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewRating"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:stepSize="1"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/textViewCommentTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Відгук:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_below="@id/ratingBar"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/textViewCommentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_below="@id/textViewCommentTitle"
+        android:layout_alignStart="@id/textViewCommentTitle" />
+
+    <TextView
+        android:id="@+id/textViewDateAddedTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Дата:"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:layout_below="@id/textViewCommentText"
+        android:layout_marginTop="8dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textViewDateAdded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_below="@id/textViewDateAddedTitle"
+        android:layout_alignStart="@id/textViewDateAddedTitle"
+        android:visibility="gone" />
+
+</RelativeLayout>
